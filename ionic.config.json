@@ -1,0 +1,7 @@
+{
+  "name": "ap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
