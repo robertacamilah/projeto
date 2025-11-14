@@ -10,5 +10,9 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'cartao',
+    loadComponent: () => import('./home/cartao/cartao.page').then( m => m.CartaoPage)
+  },
   
 ];
