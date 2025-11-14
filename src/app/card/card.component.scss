@@ -1,0 +1,134 @@
+
+
+
+
+.hero {
+  --background: #fff;
+  text-align: center;
+   max-height:300px;
+  padding: 20px;
+}
+
+.title h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.subtitle p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.box {
+  margin-top: 24px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.input-box {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  --background: #fff;
+}
+
+.btn-search {
+  border-radius: 12px;
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  color: #fff;
+  font-weight: 600;
+}
+
+
+
+
+
+ion-card {
+  max-width: 360px;
+  margin: 15px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.219);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.37);
+  }
+
+  ion-img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  ion-badge[slot] {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ff4081;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 12px;
+    z-index: 10;
+  }
+
+  ion-card-header {
+    padding: 12px;
+
+    ion-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      color: #000;
+    }
+  }
+
+  ion-card-content {
+    padding: 12px;
+
+    p {
+      font-size: 14px;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+    ion-item {
+      --padding-start: 0;
+      --padding-end: 0;
+      --inner-padding-end: 0;
+      --inner-padding-start: 0;
+      font-size: 12px;
+      color: #ffffff;
+        --background: transparent;
+  --ion-item-background: transparent; // cobre variações do Ionic
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      ion-label {
+        font-size: 12px;
+        color: #000000;
+      }
+    }
+
+    ion-button {
+      font-size: 12px;
+      --padding-start: 6px;
+      --padding-end: 6px;
+      --color: #000;
+
+      ion-icon {
+        margin-right: 4px;
+        color: #000;
+        font-size: 16px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
