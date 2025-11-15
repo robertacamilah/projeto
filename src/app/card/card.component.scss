@@ -1,49 +1,4 @@
 
-
-
-
-.hero {
-  --background: #fff;
-  text-align: center;
-   max-height:300px;
-  padding: 20px;
-}
-
-.title h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #111;
-}
-
-.subtitle p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.box {
-  margin-top: 24px;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-.input-box {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  margin-bottom: 14px;
-  --background: #fff;
-}
-
-.btn-search {
-  border-radius: 12px;
-  background: linear-gradient(90deg, #3b82f6, #9333ea);
-  color: #fff;
-  font-weight: 600;
-}
-
-
-
-
-
 ion-card {
   max-width: 360px;
   margin: 15px auto;
@@ -82,10 +37,11 @@ ion-card {
     padding: 12px;
 
     ion-card-title {
+      --color: #000;
       font-size: 18px;
       font-weight: 600;
       margin: 0;
-      color: #000;
+
     }
   }
 

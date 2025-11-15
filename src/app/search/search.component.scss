@@ -1,0 +1,46 @@
+
+.hero {
+  --background: #fff;
+  text-align: center;
+  max-height:300px;
+  padding: 20px;
+}
+
+.title h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.subtitle p {
+  font-size: 1rem;
+  color: #555;
+}
+.container-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  --background: #fff;
+  margin-top: 24px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.input-box {
+  --background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+
+.btn-search {
+  border-radius: 12px;
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  color: #fff;
+  font-weight: 600;
+}
+

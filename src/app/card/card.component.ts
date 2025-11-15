@@ -1,25 +1,30 @@
-import { Component, Input } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { IonicModule } from '@ionic/angular';
+import { CepService, CepData } from '../../service/cep.service';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss'],
   imports: [IonicModule, CommonModule],
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() imagem: string =
-    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80';
-  @Input() titulo: string = 'Card Moderno';
-  @Input() descricao: string =
-    'Um design elegante e interativo com animações suaves.';
-  @Input() curtidas: number = 1234;
-  @Input() comentarios: number = 342;
-  @Input() link!: string;
+  data: CepData | null = null;
+
+  constructor(private cepService: CepService) {
+    // inscreve e pega o valor atual também
+    this.cepService.cepData$.subscribe(res => {
+      if (res) {
+        console.log('Recebido no Card:', res);
+        this.data = res;
+      }
+    });
+
+    // pega o último valor emitido imediatamente
+    const current = this.cepService['cepDataSubject'].value;
+    if (current) this.data = current;
+  }
+
 }
-
-
