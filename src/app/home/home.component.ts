@@ -5,6 +5,7 @@ import { CardComponent } from '../card/card.component';
 import { HeaderComponent } from '../header/header.component';
 import { SearchComponent } from "../search/search.component";
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

@@ -1,23 +1,22 @@
 <ion-card *ngIf="data">
-  <ion-img src=""></ion-img>
+  <!-- Usa a propriedade imagem que você recebeu -->
+  <ion-img [src]="data.imagem"></ion-img>
+
+
   <ion-badge color="primary" slot="start">Novo</ion-badge>
 
   <ion-card-header>
-    <ion-card-title>{{data?.bairro}}</ion-card-title>
+    <ion-card-title>{{data.bairro}}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
     <p>Um design elegante e interativo com animações suaves. Experimente curtir e salvar este card!</p>
 
     <ion-item>
-      <ion-label>{{data?.localidade}}</ion-label>
-      <ion-label>{{data?.logradouro}}</ion-label>
+      <ion-label>Localidade: {{data.localidade}}</ion-label>
+      <ion-label>Logradouro: {{data.logradouro}}</ion-label>
     </ion-item>
 
   </ion-card-content>
 </ion-card>
-
-
-
-
 
