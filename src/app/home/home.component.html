@@ -1,3 +1,15 @@
+<ion-content [fullscreen]="true" id="container">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="date">
+          <p>Data de hoje : {{ currentDate | date : "fullDate" }}</p> 
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
 <ion-header>
   <app-header></app-header>
 </ion-header>
