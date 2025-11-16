@@ -4,6 +4,7 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { CardComponent } from '../card/card.component';
 import { HeaderComponent } from '../header/header.component';
 import { SearchComponent } from "../search/search.component";
+import {FooterComponent} from "../footer/footer.component";
 
 
 @Component({
@@ -11,7 +12,7 @@ import { SearchComponent } from "../search/search.component";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [IonicModule, CardComponent, CommonModule, HeaderComponent, SearchComponent, DatePipe],
+  imports: [IonicModule, FooterComponent, CardComponent, CommonModule, HeaderComponent, SearchComponent, DatePipe],
 })
 export class HomeComponent {
   currentDate: Date = new Date();
