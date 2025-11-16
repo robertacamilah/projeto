@@ -1,27 +1,21 @@
-
-
 <ion-header>
   <app-header></app-header>
 </ion-header>
 
 <div class="scroll-container">
 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="promo-banner">
+          <p class="mensagem">Consulte os melhores lugares para viajar hoje: <span class="data-atual">{{ currentDate | date:'dd/MM/yyyy' }}</span></p>
+          <p class="preco-promo">{{ 1500 | promo:300:'2025-11-20T23:59:59' }}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="relogio">
-            <p>Consulte os melhores lugares para viajar hoje. {{ currentDate | date:'dd/MM/yyyy' }}</p>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
   <app-search></app-search>
   <app-card *ngIf="card" [data]="card"></app-card>
-  <app-footer></app-footer>>
+  <app-footer></app-footer>
 </div>
-
-
-
-

@@ -6,6 +6,7 @@ import { HeaderComponent } from '../header/header.component';
 import { SearchComponent } from '../search/search.component';
 import { FooterComponent } from '../footer/footer.component';
 import { CepService } from '../../service/cep.service';
+import {PromoPipe} from "../promo-pipe";
 
 
 @Component({
@@ -13,7 +14,7 @@ import { CepService } from '../../service/cep.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [IonicModule, FooterComponent, CardComponent, CommonModule, HeaderComponent, SearchComponent],
+  imports: [IonicModule, PromoPipe, FooterComponent, CardComponent, CommonModule, HeaderComponent, SearchComponent],
 })
 export class HomeComponent {
   currentDate: Date = new Date();

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { CardComponent, CardData } from '../card/card.component';
-import { CepService} from '../../service/multiplos.ceps';
+import { CepService} from '../../service/cep.service';
 import {FooterComponent} from "../footer/footer.component";
 import {HeaderComponent} from "../header/header.component";
 
