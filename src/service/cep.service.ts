@@ -43,7 +43,6 @@ export class CepService {
     });
   }
 
-
   buscarVariosCeps(ceps: string[]): Observable<CepComImagem[]> {
     const requisicoes = ceps.map(cep =>
       this.http.get<any>(`https://viacep.com.br/ws/${cep}/json/`)

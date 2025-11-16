@@ -1,10 +1,10 @@
-/* CONTAINER PRINCIPAL DO FOOTER */
+
 .footer-container {
   color: #000 !important;
   margin-top: 100px;
 }
 
-/* WRAPPER INTERNO */
+
 .footer-wrapper {
   --background: #fff !important;
   --ion-background-color: #fff !important;
@@ -12,7 +12,7 @@
   padding: 24px;
 }
 
-/* GRID */
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -23,14 +23,14 @@
   }
 }
 
-/* BOXES */
+
 .footer-box {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* TÍTULOS */
+
 .footer-title {
   display: flex;
   align-items: center;
@@ -40,20 +40,19 @@
   color: #000 !important;
 }
 
-/* ÍCONES */
+
 .footer-icon {
   font-size: 24px;
   color: #000 !important;
 }
 
-/* TEXTOS */
 .footer-text {
   font-size: 14px;
   line-height: 1.4;
   color: #000 !important;
 }
 
-/* SUBTÍTULOS */
+
 .footer-subtitle {
   font-size: 16px;
   font-weight: 600;
@@ -61,21 +60,21 @@
   margin-bottom: 4px;
 }
 
-/* SOCIAL BUTTONS */
+
 .footer-social ion-button {
   --padding-start: 0;
   --padding-end: 0;
   color: #000 !important;
 }
 
-/* LISTA */
+
 ion-list {
   --background: #fff !important;
   --ion-background-color: #fff !important;
   background: #fff !important;
 }
 
-/* ÍTENS DA LISTA */
+
 ion-item {
   --background: #fff !important;
   --ion-background-color: #fff !important;
@@ -84,7 +83,7 @@ ion-item {
   --min-height: 38px;
 }
 
-/* PARTE INFERIOR */
+
 .footer-bottom {
   border-top: 1px solid #ddd;
   margin-top: 24px;

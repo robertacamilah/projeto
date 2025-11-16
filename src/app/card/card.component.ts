@@ -7,7 +7,7 @@ export interface CardData {
   bairro: string;
   localidade: string;
   logradouro: string;
-  // adicione outros campos se necessário
+
 }
 
 @Component({

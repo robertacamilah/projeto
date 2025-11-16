@@ -34,9 +34,6 @@ export class HomeComponent {
         }
       });
     }
-
-
-
   }
   ip: string = '';
   cidade: string = '';
@@ -56,8 +53,6 @@ export class HomeComponent {
     } catch (err) {
       console.error('Erro ao buscar IP:', err);
     }
-
-
 
     this.cepService.cepData$.subscribe(res => {
       if (res) {

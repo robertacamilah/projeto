@@ -19,11 +19,9 @@ export class ImagemService {
 
   constructor(private http: HttpClient) {}
 
-
   buscarImagemPorCep(cep: string): string {
     return `https://loremflickr.com/800/600/nature,landscape?lock=${cep}`;
   }
-
 
   buscarImagensExternas(): Observable<Imagem[]> {
     return this.http.get<Imagem[]>('https://picsum.photos/v2/list?page=1&limit=50\n');

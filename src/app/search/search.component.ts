@@ -4,7 +4,6 @@ import { CepService } from '../../service/cep.service';
 import { FormsModule } from '@angular/forms';
 import {BorderDirective} from "../highlight";
 
-
 @Component({
     selector: 'app-search',
     templateUrl: './search.component.html',

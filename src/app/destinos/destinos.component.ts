@@ -40,7 +40,6 @@ export class DestinosComponent {
       this.codigo = params['ip'] || '';
     });
 
-
     this.cepService.buscarVariosCeps(this.ceps).subscribe(res => {
       this.cards = res.map(c => ({
         imagem: c.imagem,

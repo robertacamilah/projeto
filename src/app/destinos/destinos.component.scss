@@ -6,7 +6,7 @@
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px; // espaço entre os cards
+  gap: 16px;
   padding: 16px;
 
 }

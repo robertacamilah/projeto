@@ -31,7 +31,6 @@ export class PromoPipe implements PipeTransform {
     } else {
       countdown = ' - por tempo limitado!';
     }
-
     if (precoComDesconto) {
       return `De R$ ${precoOriginal} por R$ ${precoComDesconto}${countdown}`;
     }
