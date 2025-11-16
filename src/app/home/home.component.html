@@ -17,9 +17,10 @@
       </ion-row>
     </ion-grid>
   <app-search></app-search>
-  <app-card></app-card>
+  <app-card *ngIf="card" [data]="card"></app-card>
   <app-footer></app-footer>>
 </div>
+
 
 
 

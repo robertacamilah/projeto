@@ -1,8 +1,14 @@
-// card.component.ts
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { CepService, CepComImagem } from '../../service/cep.service';
+
+export interface CardData {
+  imagem: string;
+  bairro: string;
+  localidade: string;
+  logradouro: string;
+  // adicione outros campos se necessário
+}
 
 @Component({
   selector: 'app-card',
@@ -12,11 +18,6 @@ import { CepService, CepComImagem } from '../../service/cep.service';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  data: CepComImagem | null = null;
-
-  constructor(private cepService: CepService) {
-    this.cepService.cepData$.subscribe(res => {
-      if (res) this.data = res;
-    });
-  }
+  @Input() data!: CardData;
 }
+
