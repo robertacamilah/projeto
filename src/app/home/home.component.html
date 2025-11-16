@@ -1,5 +1,5 @@
 <ion-header>
-  <app-header></app-header>
+  <app-header (botaoClicado)="acaoDoBotao($event)"></app-header>
 </ion-header>
 
 <div class="scroll-container">
@@ -12,6 +12,8 @@
             Consulte os melhores lugares para viajar hoje:
             <span class="data-atual">{{ currentDate | date:'dd/MM/yyyy' }}</span>
           </p>
+
+
 
           <p class="preco-promo">
             {{ 1500 | promo:300:'2025-11-20T23:59:59' }}

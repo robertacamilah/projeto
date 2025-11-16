@@ -13,7 +13,7 @@
       <ng-container #r="isRoute" appIsRoute="/home"></ng-container>
 
       @if (r.match) {
-        <ion-button href="/destinos">
+        <ion-button  (click)="onClick('destinos')">
           <ion-icon name="pin-outline"></ion-icon>
           <span>Destinos</span>
         </ion-button>
@@ -23,8 +23,6 @@
           <span>Home</span>
         </ion-button>
       }
-
-
 
       <ion-button href="#sobre">Sobre</ion-button>
       <ion-button href="#contato">Contato</ion-button>

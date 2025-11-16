@@ -1,5 +1,11 @@
 <app-header></app-header>
 <div class="main-destinos">
+  <app-info-regiao-usuario  [cidade]="cidade"
+                     [regiao]="regiao"
+                     [estado]="estado"
+                     [codigo]="codigo">
+    </app-info-regiao-usuario>
+
   <div class="cards-container">
     @for (card of cards; track card) {
       <app-card [data]="card"></app-card>

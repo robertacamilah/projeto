@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import {IsRouteDirective} from "../is-route";
@@ -13,10 +13,12 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+  // Output genérico que envia o id ou ação do botão
+  @Output() botaoClicado = new EventEmitter<string>();
 
-  menuAberto = false;
-
-  toggleMenu() {
-    this.menuAberto = !this.menuAberto;
+  onClick(botaoId: string) {
+    this.botaoClicado.emit(botaoId);
   }
 }
+
+
