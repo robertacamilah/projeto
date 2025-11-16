@@ -1,20 +1,21 @@
-<ion-content [fullscreen]="true" id="container">
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <div class="date">
-          <p>Data de hoje : {{ currentDate | date : "fullDate" }}</p> 
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+
 
 <ion-header>
   <app-header></app-header>
 </ion-header>
 
 <div class="scroll-container">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="relogio">
+            <div class="hora">{{ hora }}</div>
+            <div class="data">{{ data }}</div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   <app-search></app-search>
   <app-card></app-card>
 </div>

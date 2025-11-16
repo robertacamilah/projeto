@@ -15,6 +15,28 @@ import { SearchComponent } from "../search/search.component";
 })
 export class HomeComponent {
   currentDate: Date = new Date();
+
+
+  hora: string = '';
+  data: string = '';
+
+  ngOnInit() {
+    this.atualizarRelogio();
+    setInterval(() => this.atualizarRelogio(), 1000);
+  }
+
+  atualizarRelogio() {
+    const agora = new Date();
+
+    this.hora = agora.toLocaleTimeString('pt-BR');
+
+    this.data = agora.toLocaleDateString('pt-BR', {
+      weekday: 'long',
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric'
+    });
+  }
 }
 
 

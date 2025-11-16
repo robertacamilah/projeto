@@ -3,3 +3,26 @@
   overflow: auto;
   height: 100vh !important;
 }
+.dateToday{
+  color:#000;
+}
+
+.relogio {
+  display: inline-block;
+  background: #1f2937;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.hora {
+  font-size: 2rem;
+  font-family: monospace;
+  margin-bottom: 4px;
+}
+
+.data {
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
