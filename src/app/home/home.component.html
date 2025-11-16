@@ -8,8 +8,14 @@
     <ion-row>
       <ion-col>
         <div class="promo-banner">
-          <p class="mensagem">Consulte os melhores lugares para viajar hoje: <span class="data-atual">{{ currentDate | date:'dd/MM/yyyy' }}</span></p>
-          <p class="preco-promo">{{ 1500 | promo:300:'2025-11-20T23:59:59' }}</p>
+          <p class="mensagem">
+            Consulte os melhores lugares para viajar hoje:
+            <span class="data-atual">{{ currentDate | date:'dd/MM/yyyy' }}</span>
+          </p>
+
+          <p class="preco-promo">
+            {{ 1500 | promo:300:'2025-11-20T23:59:59' }}
+          </p>
         </div>
       </ion-col>
     </ion-row>

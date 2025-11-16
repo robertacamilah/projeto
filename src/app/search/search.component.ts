@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CepService } from '../../service/cep.service';
 import { FormsModule } from '@angular/forms';
+import {BorderDirective} from "../highlight";
 
 
 @Component({
@@ -9,10 +10,11 @@ import { FormsModule } from '@angular/forms';
     templateUrl: './search.component.html',
     styleUrls: ['./search.component.scss'],
     standalone: true,
-    imports: [
-        IonicModule,
-      FormsModule
-    ]
+  imports: [
+    IonicModule,
+    FormsModule,
+    BorderDirective
+  ]
 })
 
 export class SearchComponent   {

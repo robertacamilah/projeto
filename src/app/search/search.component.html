@@ -8,13 +8,13 @@
     <p>Digite seu CEP e descubra os melhores destinos perto de você</p>
   </ion-text>
 
-  <div class="container-input">
+  <div  class="container-input">
   <ion-card class="box">
     <ion-card-content>
 
-      <ion-item lines="none" class="input-box">
+      <ion-item appBorder lines="none" class="input-box">
 
-        <ion-input [(ngModel)]="cep" placeholder="Digite o CEP"></ion-input>
+        <ion-input  [(ngModel)]="cep" placeholder="Digite o CEP"></ion-input>
       </ion-item>
 
       <ion-button expand="block" class="btn-search" (click)="buscar()" >

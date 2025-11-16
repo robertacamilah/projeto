@@ -1,8 +1,10 @@
 ﻿import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, forkJoin } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { ImagemService, Imagem } from "./image.service"
+import { map, switchMap } from 'rxjs/operators';
+
+
 
 export interface CepData {
   cep: string;
@@ -43,30 +45,24 @@ export class CepService {
 
 
   buscarVariosCeps(ceps: string[]): Observable<CepComImagem[]> {
-    return this.imagemService.buscarImagensExternas().pipe(
-      map((imagens: Imagem[]) => {
+    const requisicoes = ceps.map(cep =>
+      this.http.get<any>(`https://viacep.com.br/ws/${cep}/json/`)
+    );
 
-        const shuffledImages = imagens.sort(() => Math.random() - 0.5);
+    return forkJoin(requisicoes).pipe(
+      switchMap((dadosCeps) =>
+        this.imagemService.buscarImagensExternas().pipe(
+          map((imagens: Imagem[]) => {
+            const embaralhadas = [...imagens].sort(() => Math.random() - 0.5);
 
-
-        const imagensParaCeps = shuffledImages.slice(0, ceps.length);
-
-        return ceps.map((cep, index) => {
-          const img = imagensParaCeps[index];
-          return {
-            cep,
-            logradouro: 'Exemplo',
-            complemento: '',
-            bairro: 'Exemplo',
-            localidade: 'Exemplo',
-            uf: 'SP',
-            estado: 'SP',
-            regiao: 'Sudeste',
-            ddd: '11',
-            imagem: img.download_url
-          } as CepComImagem;
-        });
-      })
+            return dadosCeps.map((cepData, index) => ({
+              ...cepData,
+              imagem: embaralhadas[index % embaralhadas.length]?.download_url
+            }));
+          })
+        )
+      )
     );
   }
+
 }

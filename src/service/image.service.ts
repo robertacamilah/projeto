@@ -26,6 +26,6 @@ export class ImagemService {
 
 
   buscarImagensExternas(): Observable<Imagem[]> {
-    return this.http.get<Imagem[]>('https://picsum.photos/v2/list');
+    return this.http.get<Imagem[]>('https://picsum.photos/v2/list?page=1&limit=50\n');
   }
 }
