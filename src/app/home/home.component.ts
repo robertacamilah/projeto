@@ -5,14 +5,15 @@ import { CardComponent, CardData } from '../card/card.component';
 import { HeaderComponent } from '../header/header.component';
 import { SearchComponent } from '../search/search.component';
 import { FooterComponent } from '../footer/footer.component';
-import { CepService, CepComImagem } from '../../service/cep.service';
+import { CepService } from '../../service/cep.service';
+import {DataPipe} from "../data-pipe";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [IonicModule, FooterComponent, CardComponent, CommonModule, HeaderComponent, SearchComponent],
+  imports: [IonicModule, DataPipe, FooterComponent, CardComponent, CommonModule, HeaderComponent, SearchComponent],
 })
 export class HomeComponent {
   currentDate: Date = new Date();
@@ -24,8 +25,6 @@ export class HomeComponent {
   constructor(private cepService: CepService) {}
 
   ngOnInit() {
-    this.atualizarRelogio();
-    setInterval(() => this.atualizarRelogio(), 1000);
 
     // Buscar um CEP único e setar no card
     this.cepService.cepData$.subscribe(res => {
@@ -37,17 +36,6 @@ export class HomeComponent {
           logradouro: res.logradouro
         };
       }
-    });
-  }
-
-  atualizarRelogio() {
-    const agora = new Date();
-    this.hora = agora.toLocaleTimeString('pt-BR');
-    this.data = agora.toLocaleDateString('pt-BR', {
-      weekday: 'long',
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
     });
   }
 }
