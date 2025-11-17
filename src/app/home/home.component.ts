@@ -8,6 +8,8 @@ import { FooterComponent } from '../footer/footer.component';
 import { CepService } from '../../service/cep.service';
 import {PromoPipe} from "../promo-pipe";
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 
 
 @Component({

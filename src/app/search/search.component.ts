@@ -3,6 +3,8 @@ import { IonicModule } from '@ionic/angular';
 import { CepService } from '../../service/cep.service';
 import { FormsModule } from '@angular/forms';
 import {BorderDirective} from "../highlight";
+import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-search',
